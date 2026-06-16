@@ -1,2 +1,63 @@
 # Travel_Packing-telegram-bot
-It is a telegram bot that returns the weather in a specific city and recommends package list for a trip 
+# Travel Luggage Guide bot
+
+Это телеграм бот который выдает температуру и погоду в городе, который ввел пользователь. 
+Потом в зависимости от температуры, погоды и длительности поездки бот дает список вещей которые нужно взять с собой.
+Также выводит фото города.
+
+Пример ввода:
+/pack Париж 7
+
+Пример вывода:
+(Фото)
+🌡️Температура в Париж: 13.4 градусов
+🛰️Погода: Облачно☁️
+🧳Рекомендуемые вещи:
+Паспорт 
+Билет 
+Носки 
+Пальто 
+Свитер 
+Запасная одежда
+
+
+
+## Функционал
+
+- Выводит температуру
+- Выводит фото города
+- Выводит список, рекоммендуемых вещей
+
+
+
+
+## Структура проекта
+
+python_project1/
+│
+├── botmain.py
+├── weather_get.py
+├── package_recommend.py
+├── city_photo.py
+├── .env
+└── README.md
+
+Описание:
+
+- botmain.py — главный файл где собирается бот
+- weather_get.py — получает погоду и температуру из openweathermap
+- package_recommend.py - здесь собирается список вещей
+- city_photo.py - получает фото города из unsplash
+- .env - здесь хранятся api ключи и токен телеграм бота
+
+
+Для работы проекта нужны вот такие библиотеки:
+
+- aiogram
+- requests
+- python-dotenv
+
+Их можно установить с помощью команды:
+
+```bash
+pip install aiogram requests python-dotenv
